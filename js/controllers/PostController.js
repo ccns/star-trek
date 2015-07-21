@@ -8,5 +8,5 @@
 app.controller('PostController', ['$scope', 'post', function($scope, post){
 	post.success(function(data){
 		$scope.post = data;
-	})	
+	})
 }])

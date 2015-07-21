@@ -5,4 +5,10 @@
  * @version $Id$
  */
 
-var app = angular.module('myApp',[]);
+var app = angular.module('myApp',['ngRoute']);
+app.config(function($routeProvider) {
+  $routeProvider.when('/post/:id', {
+    controller: 'PostController',
+    templateUrl: 'views/postpage.html'
+  }).otherwise({ redirectTo: '/' });
+});

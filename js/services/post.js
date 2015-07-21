@@ -5,8 +5,8 @@
  * @version $Id$
  */
 
-app.factory('post', ['$http', function($http){
-	return $http.get('http://140.116.252.149/?json_route=/posts/94')
+app.factory('post', ['$http', '$routeParams', function($http,$routeParams){
+	return $http.get('http://140.116.252.149/?json_route=/posts/'+$routeParams.id)
 		.success(function(data){
 			return data;
 		})
