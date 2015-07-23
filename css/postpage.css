@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-07-23 20:05:14
+ * @version $Id$
+ */
+.jumbotron {
+	height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+	padding-right:30px;
+	padding-left:30px;
+}
+
+.container h1 {
+	color: #00BBFF;
+}
+
+.container h3 {
+	color: #AAA;
+}
+
+.container h3 small {
+	color: #AAA;
+}
+
+#top {
+    position: fixed;
+    bottom: 30px;
+    right: 60px; 
+}
+
+.btn-circle {
+	background-color: #FF8800;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	-webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.container p {
+	font-size: 18px;
+}
