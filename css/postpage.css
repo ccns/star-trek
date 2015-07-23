@@ -8,34 +8,38 @@
 .jumbotron {
 	height: 500px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
+	background-size: cover;
+	margin-bottom: 45px;
 }
 
 .container {
-	padding-right:60px;
-	padding-left:60px;
+	background-color: #fff;
+	padding-right: 60px;
+	padding-left: 60px;
+	padding-bottom: 60px;
 }
 
 .container h1 {
-	color: #00BBFF;
+	color: #00BCD4;
 }
 
 .container h3 {
-	color: #AAA;
+	color: rgba(0,0,0,0.54);
 }
 
 .container h3 small {
-	color: #AAA;
+	color: rgba(0,0,0,0.54);
 }
 
 #top {
     position: fixed;
     bottom: 30px;
-    right: 60px; 
+    right: 30px;
 }
 
 .btn-circle {
-	background-color: #FF8800;
+	background-color: #FBB040;
 	color: #fff;
 	width: 40px;
 	height: 40px;
@@ -47,4 +51,8 @@
 
 .container p {
 	font-size: 18px;
+}
+
+.fb-like, .fb-comments {
+	margin-top: 20px;
 }

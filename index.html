@@ -27,7 +27,8 @@
 	<!-- 最新編譯和最佳化的 JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-    <!-- Main CSS -->
+    <!-- CSS -->
+	<link href="css/main.css" rel="stylesheet">
 	<link href="css/postpage.css" rel="stylesheet">
 </head>
 <body ng-app="myApp">
@@ -43,5 +44,15 @@
     <script src="js/services/post.js"></script>
     <!-- Directives -->
     <script src="js/directives/scrollTop.js"></script>
+
+    <!-- FB SDK -->
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	 var js, fjs = d.getElementsByTagName(s)[0];
+	 if (d.getElementById(id)) return;
+	 js = d.createElement(s); js.id = id;
+	 js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
+	 fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

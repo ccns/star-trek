@@ -1,11 +1,20 @@
 <div class="jumbotron" ng-style="jumb"></div>
 <div class="container">
-	<div class="row">
+	<div id="post" class="row">
 		<div class="col-md-12">
 			<h1>{{ title }}</h1>
 			<h3>by&nbsp;{{ author }}&nbsp;&nbsp;<small>{{ date | date:'yyyy-MM-dd HH:mm:ss' }}</small></h3>
-			<div ng-bind-html="deliberatelyTrustDangerousSnippet()">
+			<div ng-bind-html="deliberatelyTrustDangerousSnippet()"></div>
 		</div>
 	</div>
+	<div id="fb" class="row">
+		<div class="col-md-12">
+			<div class="fb-like" data-href="https://140.116.250.20" data-layout="standard" data-action="like" data-share="true"></div>
+			<div class="fb-share-button" data-href="https://140.116.250.20" data-layout="button_count"></div>
+			<div class="fb-comments" data-href="http://140.116.250.20" data-numposts="5"></div>
+		</div>	
+	</div>
 </div>
-<button id="top" type="button" class="btn btn-circle" scroll-top=""><span class="glyphicon glyphicon-chevron-up"></span></div>
+<div id="top">
+	<button type="button" class="btn btn-circle" scroll-top=""><span class="glyphicon glyphicon-chevron-up"></span></button>
+</div>
