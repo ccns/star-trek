@@ -1,0 +1,65 @@
+body{
+				margin:0;
+			}
+			#abgneBlock {
+				width: 940px;
+				height: 279px;
+				position: relative;
+				overflow: hidden;
+				/*border: 1px solid #ccc;*/
+			}
+			#abgneBlock ul.list {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				position: absolute;
+				width: 9999px;
+				height: 100%;
+			}
+			#abgneBlock ul.list li {
+				float: left;
+				width: 940px;
+				height: 100%;
+			}
+			#abgneBlock .list img{
+				width: 100%;
+				height: 90%;
+				border: 0;
+			}
+			#abgneBlock ul.playerControl {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+				height: 20px;
+			}
+			#abgneBlock ul.playerControl li {
+				float: left;
+				width: 15px;
+				height: 14px;
+				cursor: pointer;
+				margin: 0px 2px;
+				
+				/*add*/
+				background-color:#E6E6FA;	/*gray for initial*/
+				border-color:#A9A9A9;
+				border-width:3px;
+				border-style:solid;
+				border-radius: 50px;	/* for border-radius */
+				border-radius:50px;
+				/*end add*/
+				
+			}
+			#abgneBlock ul.playerControl li.current { 
+				/*background-position: -23px 0;*/
+				
+				/*add*/
+				background-color:black;
+				border-radius:50px;
+				background-color:#A9A9A9;	/*become longer when clicked*/
+				width:40px;
+				/*end add*/
+				
+			}

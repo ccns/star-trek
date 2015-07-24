@@ -1,0 +1,164 @@
+html,body
+{
+	height: 100%;
+	background-color:#E6E6E6;
+	margin:0;
+	padding:0;
+}
+
+.header_content
+{
+	/*display: inline-block;*/
+	margin:0;
+	float:left;
+}
+
+.header
+{
+	/*relative to the header*/
+	background-color:#00ced1;
+	width:100%;
+	height: 100px;
+	
+	/*relative to the word inside*/
+	padding-left:8%;
+	line-height:100px;	
+	font-size:30px;
+	font-weight:bold;
+	color:white;
+	font-family:monospace;
+	
+	clear:left;
+}
+
+#search_icon
+{
+	
+	float:left;
+	line-height:100px;
+}
+
+.footer
+{
+	/*relative to the footer*/
+	background-color:#696969;
+	width:100%;
+	height: 200px;
+	
+	/*relative to the word inside*/	
+	/*font-size:30px;*/
+	
+	font-weight:bold;
+	color:white;
+	font-family:monospace;
+}
+
+.footer_content
+{
+	margin:0;
+}
+
+.footer_left
+{
+	padding-top:5px;
+	margin-left:7%;
+	font-size:40px;
+	
+}
+
+.footer_right
+{
+	/*margin-left:550px;*/
+	margin-right:6%;
+	/*padding: auto;*/
+	text-align:right;
+
+}
+
+#footer_right_upper
+{
+	font-size:20px;
+	margin:0;
+	padding:0;
+	
+}
+
+#footer_right_lower
+{
+	margin: 0;
+	padding:0;
+	font-size:37px;
+}
+
+@media screen and (min-width: 1600px) {
+
+#search_icon{margin-left:80%;}
+
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1599px) {
+
+#search_icon{margin-left:75%;}  
+
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {
+
+#search_icon{margin-left:70%;}  
+
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+
+#search_icon{margin-left:65%;}  
+
+}
+
+@media screen and (min-width: 650px) and (max-width: 750px) {
+
+#search_icon{margin-left:60%;}
+.header{font-size:27px;}
+.footer_left{font-size:36px;}
+#footer_right_upper{font-size:17px;}
+#footer_right_lower{font-size:32px;} 
+
+}
+
+@media screen and (min-width: 550px) and (max-width: 650px) {
+
+#search_icon{margin-left:58%;}
+.header{font-size:24px;}
+.footer_left{font-size:33px;}
+#footer_right_upper{font-size:15px;}
+#footer_right_lower{font-size:29px;} 
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+
+#search_icon{margin-left:54%;}
+.header{font-size:21px;}
+.footer_left{font-size:30px;}
+#footer_right_upper{font-size:13px;}
+#footer_right_lower{font-size:26px;} 
+
+}
+/*
+@media screen and (max-device-width: 450px) {
+*/
+@media screen and (max-width: 450px){
+body{width:450px;}
+#search_icon{margin-left:240px;}
+.header{font-size:21px;padding-left:16px;}
+.footer_left{font-size:30px;margin-left:16px;}
+.footer_right{margin-right:20px;}
+#footer_right_upper{font-size:13px;}
+#footer_right_lower{font-size:26px;} 
+}
+
+
+
+
+
+
+
