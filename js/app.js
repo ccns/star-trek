@@ -9,6 +9,6 @@ var app = angular.module('myApp',['ngRoute','ngSanitize']);
 app.config(function($routeProvider) {
   $routeProvider.when('/post/:id', {
     controller: 'PostController',
-    templateUrl: 'views/postpage.html'
+    templateUrl: 'views/postpageview.html'
   }).otherwise({ redirectTo: '/' });
 });
