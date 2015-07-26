@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var track_load = 0; //total loaded record group(s)
 	var loading  = false; //to prevents multipal ajax loads
-	//var total_groups = $('.totalGroup').val(); //total record group(s)
+	var total_groups = 10000; //total record group(s)
 	//var group_type = $('.typeGroup').val();
 	//var group_search = $('.searchGroup').val();
 	
@@ -19,8 +19,7 @@ $(document).ready(function(){
 				$('.animation_image').show(); //show loading image
 				
 				//load data from the server using a HTTP POST request
-				if(group_type == 'all')
-				{
+
 					$.post('libraries/autoload.php',{'group_no': track_load}, function(data){
 										
 						$("#results").append(data); //append received data into the element
@@ -38,7 +37,6 @@ $(document).ready(function(){
 						loading = false;
 					
 					});
-				}
 				
 			}
 		}
