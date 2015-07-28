@@ -1,5 +1,5 @@
 <?php
-	$per_page=3;
+	$per_page=5;
 	if($_POST)
 	{	
 		//sanitize post value
@@ -13,17 +13,51 @@
 		//get current starting point of records
 		$position = ($group_number * $per_page);
 		
-		$url="http://140.116.252.149/?json_route=/posts";
+		$category=$_POST['group_type'];
+		switch($category){
+			case "tab1":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%201";
+				break;
+			case "tab2":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%202";
+				break;
+			case "tab3":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%203";
+				break;
+			case "tab4":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%204";
+				break;
+			case "tab5":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%205";
+				break;
+			case "tab6":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%206";
+				break;
+			case "tab7":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%207";
+				break;
+			case "tab8":
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%208";
+				break;
+			
+		}
+		//$url="http://140.116.252.149/?json_route=/posts";
 		$data = file_get_contents($url);
 		
 		$jasonDecode = json_decode($data,true);
-		
-		//print_r($jasonDecode[0]);
-		
 		$length=count($jasonDecode);
 		
+
 		
-		for($a=$position;$a<=$per_page;$a++)
+		//print_r($jasonDecode[0]);
+		//echo 'group_number:'.$group_number.'<br>';
+		//echo 'position:'.$position;
+		if($position > 0)
+		{$last=$position+5;}
+		else
+		{$last=$per_page;}
+	
+		for($a=$position;$a<$last;$a++)
 		{
 			$id=$jasonDecode[$a]['ID'];
 			$title=$jasonDecode[$a]['title'];
@@ -43,6 +77,8 @@
 			$lasteditTime=$jasonDecode[$a]['modified_gmt'];
 			
 			
+			if($id!="")
+			{
 			echo'<div class="col-md-12" style="border:1px solid;margin-top:15px;">';
 				echo'<div class="page-header">';
 						echo"<h1><small>$title</small><br>";
@@ -52,8 +88,13 @@
 					echo $newIntro;
 				echo'</div>';
 			echo'</div>';
+			}
 			
 		}
+	}
+	else
+	{
+		echo 'error';
 	}
 
 ?>
