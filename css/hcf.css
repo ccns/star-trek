@@ -3,9 +3,10 @@ body{
 			}
 			#abgneBlock {
 				width: 940px;
-				height: 279px;
+				height: 350px;
 				position: relative;
 				overflow: hidden;
+				margin: auto;
 				/*border: 1px solid #ccc;*/
 			}
 			#abgneBlock ul.list {

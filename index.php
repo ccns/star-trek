@@ -38,6 +38,15 @@
 	?>
   </head>
   <body>
+  	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+  		var js, fjs = d.getElementsByTagName(s)[0];
+  		if (d.getElementById(id)) return;
+  		js = d.createElement(s); js.id = id;
+  		js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
+  		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<div class="header">
 		<div class="header_content">LOGO BANNER</div>
 		<div class="glyphicon glyphicon-search" id="search_icon"></div>
@@ -60,43 +69,115 @@
 		<section class="block">
 		
 			<article id="tab1">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
 			
 			<article id="tab2">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results_2" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
 			
 			<article id="tab3">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results_3" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
 			
 			<article id="tab4">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results_4" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
 			
 			
 			<article id="tab5">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results_5" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
 			
 			
 			<article id="tab6">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results_6" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
 			
 			<article id="tab7">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results_7" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
 			
 			<article id="tab8">
+				<div id="abgneBlock">
+					<ul class="list">
+						<li><img src="example-slide-1.jpg"></li>
+						<li><img src="example-slide-2.jpg"></li>
+						<li><img src="example-slide-3.jpg"></li>
+						<li><img src="example-slide-4.jpg"></li>
+						<li><img src="example-slide-5.jpg"></li>
+					</ul>
+				</div>
 				<div class="row" id="results_8" style="margin:10px 0px 0px 10px"></div>
 				<div class="animation_image" style="display:none" align="center"><img src="images/ajax-loader.gif"></div>
 			</article>
@@ -119,6 +200,7 @@
 	
 	<div class="footer">
 		<p class="footer_content footer_left">SPONSER HERE</p>
+		<div class="fb-like" data-href="https://140.116.250.20" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		<div class="footer_content footer_right">
 			<p id="footer_right_upper">power by</p>
 			<p id="footer_right_lower">SSX LOGO HERE</p>
