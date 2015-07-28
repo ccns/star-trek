@@ -13,6 +13,9 @@
 		//get current starting point of records
 		$position = ($group_number * $per_page);
 		
+		//$opts = array('http'=>array('header' => "User-Agent:MyAgent/1.0\r\n"));
+		//$context = stream_context_create($opts);
+		
 		$category=$_POST['group_type'];
 		switch($category){
 			case "tab1":
@@ -39,10 +42,12 @@
 			case "tab8":
 				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%208";
 				break;
-			
+			default:
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%201";
+				break;				
 		}
 		//$url="http://140.116.252.149/?json_route=/posts";
-		$data = file_get_contents($url);
+		$data = file_get_contents($url,false,$context);
 		
 		$jasonDecode = json_decode($data,true);
 		$length=count($jasonDecode);
@@ -67,7 +72,7 @@
 				if($countIntro>=350)
 				{
 					$newIntro=mb_substr($content,0,345,"UTF-8");
-					$newIntro.="...";
+					$newIntro.="...[<a href=\"http://140.116.252.149/postpage.html#/post/$id\">查看更多</a>]";
 				}
 				else
 				{
@@ -81,7 +86,7 @@
 			{
 			echo'<div class="col-md-12" style="border:1px solid;margin-top:15px;">';
 				echo'<div class="page-header">';
-						echo"<h1><small>$title</small><br>";
+						echo"<h1><small><a href=\"http://140.116.252.149/postpage.html#/post/$id\">$title</a></small><br>";
 						echo'<span style="font-size:10px;">發布者:'.$author.' , 最後編輯時間:'.$lasteditTime.'</span>';
 				echo'</div>';
 				echo'<div class="content">';
