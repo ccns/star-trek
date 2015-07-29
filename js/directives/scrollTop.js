@@ -10,7 +10,7 @@ app.directive('scrollTop', function() {
     restrict: 'A',
     link: function(scope, $elm) {
       $elm.on('click', function() {
-        $("html").animate({scrollTop: 0}, "slow");
+        $("html body").animate({scrollTop: 0}, "slow");
       });
     }
   }

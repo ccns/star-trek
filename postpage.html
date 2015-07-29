@@ -30,10 +30,16 @@
     <!-- CSS -->
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/postpage.css" rel="stylesheet">
+	<link href="css/header.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
 </head>
 <body ng-app="myApp">
 
+	<div ng-include="'views/header.html'"></div>
+
 	<div ng-view></div>
+
+	<div ng-include="'views/footer.html'"></div>
 
 	<!-- AngularJS includes -->
     <!-- Modules -->
