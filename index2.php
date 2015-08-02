@@ -18,9 +18,12 @@
 		<!-- 最新編譯和最佳化的 JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		
-		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
-		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<!-- Material Design Lite -->
+	    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+	    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+	    <!-- Material Design icon font -->
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -55,10 +58,6 @@
 			.demo-card-wide.mdl-card {
 				width: 940px;
 				margin: 0px auto;
-				
-				
-
-
 			}
 			.demo-card-wide > .mdl-card__title {
 				color: #fff;
@@ -138,7 +137,7 @@
 				
 			</section>
 		</section>
-		
+
 		<!--幻燈片
 		<div id="abgneBlock">
 						<ul class="list">

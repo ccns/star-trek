@@ -70,7 +70,7 @@
 				$title=$jasonDecode[$a]['title'];
 				$author=$jasonDecode[$a]['author']['username'];
 				$content=$jasonDecode[$a]['content'];
-				$countIntro=mb_strlen($content,'utf8');
+				$excerpt=$jasonDecode[$a]['excerpt'];
 
 				if($category == "tab8"){
 					//擷取活動標題、內容
@@ -87,42 +87,38 @@
 					$query = '//*/meta[starts-with(@property, \'og:image\')]';
 					$metas = $xpath->query($query);
 					foreach ($metas as $meta) {
-					$photo = $meta->getAttribute('content');
-				}
-
-
-
-				}
-
-					if($countIntro>=500)
-					{
-						$end = $countIntro/2 ;
-						$newIntro=mb_substr($content,0,$end,"UTF-8");
-						$more="...[<a href=\"http://140.116.252.149/postpage.html#/post/$id\">查看更多</a>]";
+						$photo = $meta->getAttribute('content');
 					}
-					else
-					{
-						$newIntro=$content;
-						$more='';
-					}
+				}
 				
 				$lasteditTime=$jasonDecode[$a]['modified_gmt'];
-				
-				
-				if($id!=""&& $category != "tab8")
-				{
-				echo'<div class="col-md-12" style="border:0px solid;margin-top:15px;">';
-					echo'<div class="page-header">';
-							echo"<span style=\"display:inline;\"><h4><a href=\"http://140.116.252.149/postpage.html#/post/$id\">$title</a></h4></span>";
-							echo'<span style="font-size:10px;display:inline;">發布者:'.$author.' , 最後編輯時間:'.$lasteditTime.'</span>';
-					echo'</div>';
-					echo'<div class="content">';
-						echo $newIntro.'<br>';
-						echo $more;
-					echo'</div>';
-				echo'</div><br>';
+
+				// find the first img in content
+				if($pos = strpos($content, 'img')) {
+					$s = substr($content, strpos($content, 'src', $pos)+5);
+					$thumbnail = substr($s, 0, strpos($s, '"'));
+				} else {
+					$thumbnail = "images/no_picture.jpg";
 				}
-				else if($id!="" && $category == "tab8"){
+				
+				if($id!=""&& $category != "tab8") {
+					echo'<div class="col-md-10 col-md-offset-1 mdl-shadow--2dp card">';
+						echo'<div class="row">';
+							echo'<div class="article-info col-md-9">';
+								echo'<div class="title">';
+									echo"<span style=\"display:inline;\"><h4><a href=\"postpage.html#/post/$id\">$title</a></h4></span>";
+									echo'<span style="font-size:10px;display:inline;">發布者:'.$author.' , 最後編輯時間:'.$lasteditTime.'</span>';
+								echo'</div>';
+								echo'<div class="content">';
+									echo $excerpt;
+								echo'</div>';
+							echo'</div>';
+							echo'<div class="thumb col-md-3 text-center">';
+								echo'<img src="'.$thumbnail.'" >';
+							echo'</div>';
+						echo'</div>';
+					echo'</div>';
+				} else if($id!="" && $category == "tab8") {
 					echo'<div class="mdl-card mdl-shadow--2dp demo-card-wide" >';
 						echo'<div style=" width:60%; background-color: green; display: inline-block; ">';
 							echo'<div class="mdl-card__title" >';

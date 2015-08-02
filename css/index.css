@@ -1,7 +1,7 @@
 html,body
 {
 	height: 100%;
-	background-color:#E6E6E6;
+	background-color:#EEE;
 	margin:0;
 	padding:0;
 }
@@ -207,9 +207,28 @@ body{width:450px;}
 #footer_right_lower{font-size:26px;} 
 }
 
+.card {
+	margin-bottom: 20px;
+}
 
+.thumb {
+	height: 230px;
+	width: 250px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
 
-
+.thumb img {
+	height: 100%;
+	/* center the img */
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
 
 
 
