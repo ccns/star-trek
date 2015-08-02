@@ -19,11 +19,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		
 		<!-- Material Design Lite -->
-	    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
-	    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
-	    <!-- Material Design icon font -->
-	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+		<!-- Material Design icon font -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -54,23 +53,7 @@
 			<div class="header_content">LOGO BANNER</div>
 			<div class="glyphicon glyphicon-search" id="search_icon"></div>
 		</div>
-		<style>
-			.demo-card-wide.mdl-card {
-				width: 940px;
-				margin: 0px auto;
-			}
-			.demo-card-wide > .mdl-card__title {
-				color: #fff;
-				height: 176px;
-				
-			}
-			.demo-card-wide > .mdl-card__menu {
-				color: #fff;
-				
-				
 		
-			}
-		</style>
 		<section class="wrapper">
 			<ul class="tabs">
 				<li id="#tab1"><a href="">分類一</a></li>
@@ -137,16 +120,15 @@
 				
 			</section>
 		</section>
-
 		<!--幻燈片
 		<div id="abgneBlock">
-						<ul class="list">
-									<li><img src="example-slide-1.jpg"></li>
-									<li><img src="example-slide-2.jpg"></li>
-									<li><img src="example-slide-3.jpg"></li>
-									<li><img src="example-slide-4.jpg"></li>
-									<li><img src="example-slide-5.jpg"></li>
-						</ul>
+							<ul class="list">
+											<li><img src="example-slide-1.jpg"></li>
+											<li><img src="example-slide-2.jpg"></li>
+											<li><img src="example-slide-3.jpg"></li>
+											<li><img src="example-slide-4.jpg"></li>
+											<li><img src="example-slide-5.jpg"></li>
+							</ul>
 		</div>
 		
 		-->

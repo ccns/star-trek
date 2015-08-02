@@ -82,7 +82,9 @@
 					//擷取活動圖片
 					libxml_use_internal_errors(true);
 					$doc = new DomDocument();
-					$doc->loadHTML(file_get_contents($title));
+					if($id!=""){
+						$doc->loadHTML(file_get_contents($title));
+					}
 					$xpath = new DOMXPath($doc);
 					$query = '//*/meta[starts-with(@property, \'og:image\')]';
 					$metas = $xpath->query($query);
@@ -118,19 +120,22 @@
 							echo'</div>';
 						echo'</div>';
 					echo'</div>';
-				} else if($id!="" && $category == "tab8") {
-					echo'<div class="mdl-card mdl-shadow--2dp demo-card-wide" >';
-						echo'<div style=" width:60%; background-color: green; display: inline-block; ">';
-							echo'<div class="mdl-card__title" >';
-												echo'<h2><small><a href='.$title.'>'.$activityTitle.'</a></small><br>';
-												echo'<span style="font-size:20px; "> Date:'.$lasteditTime.'</span>';
+				} 
+				else if($id!="" && $category == "tab8") {
+					echo'<div class="col-md-10 col-xs-12 col-md-offset-1 mdl-shadow--2dp card">';
+						echo'<div class="row">';
+							echo'<div class="article-info col-md-6 col-xs-12">';
+								echo'<div class="title">';
+									echo"<span style=\"display:inline;\"><h4><a href=$title>$activityTitle</a></h4></span>";
+									echo'<span style="font-size:10px;display:inline;">發布時間:'.$lasteditTime.'</span>';
+								echo'</div>';
+								echo'<div class="content">';
+									echo '<p>'.$description.'</p>';
+								echo'</div>';
 							echo'</div>';
-							echo'<div class="mdl-card__supporting-text">';											
-											echo '<p>'.$description.'</p>';
+							echo'<div class="thumbactivity col-md-6 col-xs-12 text-center">';
+								echo'<img src="'.$photo.'" >';
 							echo'</div>';
-						echo'</div>';
-						echo'<div style="float:right;width:40%;background-color: purple;display: inline-block;">';
-							echo  '<img style=" width:100%; margin: 0px auto;" src="'.$photo.'"/>';
 						echo'</div>';
 					echo'</div>';
 				}
