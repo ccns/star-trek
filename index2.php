@@ -34,6 +34,7 @@
 		<link rel="stylesheet" href="css/carouse.css" type="text/css">
 		<link rel="stylesheet" href="css/hcf.css" type="text/css">
 		<link rel="stylesheet" href="css/index.css" type="text/css">
+		<link rel="stylesheet" href="css/postpage.css" type="text/css">
 		
 		<?php
 			echo"<input type=\"hidden\" class=\"typeGroup\" value=\"tab1\">";
@@ -53,6 +54,23 @@
 			<div class="header_content">LOGO BANNER</div>
 			<div class="glyphicon glyphicon-search" id="search_icon"></div>
 		</div>
+		<script type="text/javascript">
+		$(function(){
+			$("#top").click(function(){
+				jQuery("html,body").animate({
+				scrollTop:0
+				},1000);
+			});
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 300){
+					$('#gotop').fadeIn("fast");
+				} 
+				else {
+					$('#gotop').stop().fadeOut("fast");
+				}
+			});
+		});
+		</script>
 		
 		<section class="wrapper">
 			<ul class="tabs">
@@ -122,17 +140,19 @@
 		</section>
 		<!--幻燈片
 		<div id="abgneBlock">
-							<ul class="list">
-											<li><img src="example-slide-1.jpg"></li>
-											<li><img src="example-slide-2.jpg"></li>
-											<li><img src="example-slide-3.jpg"></li>
-											<li><img src="example-slide-4.jpg"></li>
-											<li><img src="example-slide-5.jpg"></li>
-							</ul>
+									<ul class="list">
+															<li><img src="example-slide-1.jpg"></li>
+															<li><img src="example-slide-2.jpg"></li>
+															<li><img src="example-slide-3.jpg"></li>
+															<li><img src="example-slide-4.jpg"></li>
+															<li><img src="example-slide-5.jpg"></li>
+									</ul>
 		</div>
 		
 		-->
-		
+		<div id="top">
+			<button type="button" class="btn btn-circle" scroll-top=""><span class="glyphicon glyphicon-chevron-up"></span></button>
+		</div>
 		<div class="footer">
 			<p class="footer_content footer_left">SPONSER HERE</p>
 			<div class="fb-like" data-href="https://140.116.250.20" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>

@@ -106,7 +106,10 @@
 				if($id!=""&& $category != "tab8") {
 					echo'<div class="col-md-10 col-md-offset-1 mdl-shadow--2dp card">';
 						echo'<div class="row">';
-							echo'<div class="article-info col-md-9">';
+							echo'<div class="thumb col-xs-12 text-center mobile" >';
+								echo'<img src="'.$thumbnail.'" >';
+							echo'</div>';
+							echo'<div class="article-info col-md-9 col-xs-12">';
 								echo'<div class="title">';
 									echo"<span style=\"display:inline;\"><h4><a href=\"postpage.html#/post/$id\">$title</a></h4></span>";
 									echo'<span style="font-size:10px;display:inline;">發布者:'.$author.' , 最後編輯時間:'.$lasteditTime.'</span>';
@@ -115,7 +118,7 @@
 									echo $excerpt;
 								echo'</div>';
 							echo'</div>';
-							echo'<div class="thumb col-md-3 text-center">';
+							echo'<div class="thumb col-md-3 text-center desktop">';
 								echo'<img src="'.$thumbnail.'" >';
 							echo'</div>';
 						echo'</div>';
@@ -124,6 +127,9 @@
 				else if($id!="" && $category == "tab8") {
 					echo'<div class="col-md-10 col-xs-12 col-md-offset-1 mdl-shadow--2dp card">';
 						echo'<div class="row">';
+							echo'<div class="thumbactivity col-md-6 col-xs-12 text-center mobile">';
+								echo'<img src="'.$photo.'" >';
+							echo'</div>';
 							echo'<div class="article-info col-md-6 col-xs-12">';
 								echo'<div class="title">';
 									echo"<span style=\"display:inline;\"><h4><a href=$title>$activityTitle</a></h4></span>";
@@ -133,7 +139,7 @@
 									echo '<p>'.$description.'</p>';
 								echo'</div>';
 							echo'</div>';
-							echo'<div class="thumbactivity col-md-6 col-xs-12 text-center">';
+							echo'<div class="thumbactivity col-md-6 col-xs-12 text-center desktop">';
 								echo'<img src="'.$photo.'" >';
 							echo'</div>';
 						echo'</div>';

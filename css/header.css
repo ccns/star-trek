@@ -12,12 +12,18 @@
 	float:left;
 }
 
+.mdl-layout__header
+{
+	background-color: #00BCD4;
+	height:100px;
+}
+    
 .header
 {
 	/*relative to the header*/
-	background-color:#00ced1;
+	background-color:#00BCD4;
 	width:100%;
-	height: 100px;
+	height: 150px;
 	
 	/*relative to the word inside*/
 	padding-left:8%;
@@ -90,3 +96,64 @@ body{width:450px;}
 .header{font-size:21px;padding-left:16px;}
 }
 
+.mdl-layout__tab-bar {
+    height: 96px;
+    margin: 0;
+    width: calc(100% - 112px);
+    padding: 0 0 0 56px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #00BCD4;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.mdl-layout__tab {
+    margin: 0;
+    border: none;
+    padding: 0 24px;
+    float: left;
+    position: relative;
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    overflow: hidden;
+}
+.mdl-layout__tab :hover{
+    margin: 0;
+    border: none;
+    padding: 0 24px;
+    float: left;
+    position: relative;
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    overflow: hidden;
+}
