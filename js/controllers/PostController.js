@@ -25,7 +25,10 @@ app.controller('PostController', ['$scope', '$sce', 'post', function($scope, $sc
 		cont = cont.substring(0,a).concat(cont.substring(a+img.length));
 
 		$scope.link = data.link;
-		$scope.jumb = { 'background-image': 'url("' + src + '")' };
+		if(src === "")
+			$scope.jumb = { 'height': '0' };
+		else
+			$scope.jumb = { 'background-image': 'url("' + src + '")' };
 		$scope.title = data.title;
 		$scope.author = data.author.nickname;
 		$scope.date = Date.parse(data.date_gmt);
