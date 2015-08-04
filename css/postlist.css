@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/**
+ * post list stylesheet
+ * @authors Your Name (you@example.org)
+ * @date    2015-08-04 22:38:00
+ * @version $Id$
+ */
+.post {
+	background-color: white;
+	margin-bottom: 40px;
+}

@@ -19,31 +19,31 @@
 		$category=$_POST['group_type'];
 		switch($category){
 			case "tab1":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%201";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat1";
 				break;
 			case "tab2":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%202";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat2";
 				break;
 			case "tab3":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%203";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat3";
 				break;
 			case "tab4":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%204";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat4";
 				break;
 			case "tab5":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%205";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat5";
 				break;
 			case "tab6":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%206";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat6";
 				break;
 			case "tab7":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%207";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat7";
 				break;
 			case "tab8":
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%208";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat8";
 				break;
 			default:
-				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=category%201";
+				$url="http://140.116.252.149/?json_route=/posts&filter[category_name]=cat1";
 				break;				
 		}
 		//$url="http://140.116.252.149/?json_route=/posts";
