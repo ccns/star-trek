@@ -5,13 +5,18 @@
  * @version $Id$
  */
 
-app.controller('PostListController', ['$scope', '$sce', 'postList', function($scope, $sce, postList){
-	postList.success(function(datas){
-		//alert(datas.length);
+app.controller('PostListController', ['$routeParams', '$scope', '$sce', '$route', 'postList', function($routeParams, $scope, $sce, $route, postList){
+	
+	$scope.$on('$includeContentLoaded', function() {
+    	$('#cat' + $routeParams.id).addClass('active');
+	});
+
+	postList.getDatas().success(function(datas){
 		$scope.posts = [];
 
 		for (var i = 0; i < 5; i++) {
-			$scope.posts.push(data_of_a_post(i));
+		    if( i < datas.length )
+				$scope.posts.push(data_of_a_post(i));
 		};
 
 
@@ -62,4 +67,5 @@ app.controller('PostListController', ['$scope', '$sce', 'postList', function($sc
 			return post;
 		}
 	})
+
 }])

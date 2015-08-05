@@ -6,18 +6,18 @@
  */
 
 app.controller('PostController', ['$scope', '$sce', 'post', function($scope, $sce, post){
-	post.success(function(data){
+	post.getDatas().success(function(data){
 		cont = data.content;
 		
 		// get first img
 		cont = $(cont);
 		img = cont.find("img")[0];
-		if(img)	
+		if(img)	{
+			img.remove();
 			src = img.src;
-		else
+		} else
 			src = "images/no_picture.jpg";
 		// remove first img
-		img.remove();
 		cont = $('<div>').append(cont.clone()).remove().html();
 
 		$scope.link = data.link;

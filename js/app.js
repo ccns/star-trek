@@ -17,3 +17,5 @@ app.config(function($routeProvider) {
     templateUrl: 'views/postlistview.html'
   }).otherwise({ redirectTo: '/category/1' });
 });
+
+app.run(['$route', angular.noop]);
