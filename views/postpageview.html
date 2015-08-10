@@ -1,12 +1,11 @@
 <link href="css/postpage.css" rel="stylesheet">
+<div ng-include="'views/postpageheader.html'"></div>
+
 <div class="jumbotron" ng-style="jumb"></div>
-<div class="container">
-	<div ng-include="'views/tabs.html'"></div>
-</div>
 <div id="content" class="container">
 	<div id="post" class="row">
 		<div class="col-md-12">
-			<h1>{{ title }}</h1>
+			<h2>{{ title }}</h2>
 			<h3>by&nbsp;{{ author }}&nbsp;&nbsp;<small>{{ date | date:'yyyy-MM-dd HH:mm:ss' }}</small></h3>
 			<div ng-bind-html="deliberatelyTrustDangerousSnippet()"></div>
 		</div>

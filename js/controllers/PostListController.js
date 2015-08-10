@@ -36,14 +36,6 @@ app.controller('PostListController', ['$routeParams', '$scope', '$sce', '$route'
 		function data_of_a_post(index) {
 			data = datas[index];
 
-			// get first img
-			cont = data.content;
-			img = $(cont).find("img")[0];
-			if(img)	
-				src = img.src;
-			else
-				src = "images/no_picture.jpg";
-
 			// modify read more
 			excerpt = $(data.excerpt);
 			a = excerpt.find("a");
@@ -52,7 +44,7 @@ app.controller('PostListController', ['$routeParams', '$scope', '$sce', '$route'
 				a[0].href = "#/post/" + data.ID;
 			} else {
 				excerpt[0].innerHTML += " ... ";
-				excerpt.append('<span class="more"><a class="more-link" href="#/post/' + data.ID + '">[閱讀更多]</a></span>')
+				excerpt.append('<span class="more"><a class="more-link" href="#/post/' + data.ID + '">[more]</a></span>')
 			}
 			excerpt = $('<div>').append(excerpt.clone()).remove().html();
 
@@ -63,7 +55,13 @@ app.controller('PostListController', ['$routeParams', '$scope', '$sce', '$route'
 			post.author = data.author.username;
 			post.date = data.date;
 			post.excerpt = excerpt;
-			post.thumbnail = src;
+			//post.thumbnail = src;
+			if(data.featured_image!=null){
+				post.image = data.featured_image.guid;
+			}
+
+
+
 			return post;
 		}
 	})

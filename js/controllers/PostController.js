@@ -21,10 +21,15 @@ app.controller('PostController', ['$scope', '$sce', 'post', function($scope, $sc
 		cont = $('<div>').append(cont.clone()).remove().html();
 
 		$scope.link = data.link;
+
 		if(src === "")
 			$scope.jumb = { 'height': '0' };
-		else
+		else {
+			if(data.featured_image!=null){
+				src = data.featured_image.guid;
+			}
 			$scope.jumb = { 'background-image': 'url("' + src + '")' };
+		}
 		$scope.title = data.title;
 		$scope.author = data.author.nickname;
 		$scope.date = Date.parse(data.date_gmt);

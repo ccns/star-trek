@@ -5,11 +5,137 @@
  * @date    2015-08-04 22:38:00
  * @version $Id$
  */
-.post {
+ .post {
 	background-color: white;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	
 	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	border-bottom-color: rgba(0,0,0,0.1);
+	box-shadow:0 2px 0px rgba(0,0,0,0.12);
+	
 }
+.row{
+	margin-right:10%;
+	margin-left:10%;
+
+}
+.thumb{
+	height: 125px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.thumb img{
+
+	width:100%;
+	height:100%;
+    
+}
+.tabs {
+    font-size: 1.5em;
+    margin-top: 30px;
+    text-align: center;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+.tabs li{
+    display: inline;
+}
+.tabs li a{
+    color: black;
+    padding: 5px 15px;
+    transition: 0.1s ease background,color 0.1s;
+    border-radius: 2px;
+}
+
+.tabs li :hover{
+	color: white;
+	background-color: orange;
+	text-decoration: none;
+}
+.tabs li .active{
+	color: white;
+	background-color: orange;
+}
+@media screen and (min-width: 785px)and (max-width: 1599px) {
+.mobile{
+	display: none;
+}
+.desktop{
+	display: inline;
+}
+.tabs{
+	margin-right: 0%;
+    margin-left: 0%;
+}
+}
+ @media screen and (min-width: 450px) and (max-width: 780px){
+.desktop{
+	display: none;
+}
+.mobile{
+	display: inline;
+}
+.thumb img{
+
+	width:100%;
+	height:100%;
+    margin-left:-15px;
+}
+
+}
+ @media screen and (max-width: 450px){
+.desktop{
+	display: none;
+}
+.mobile{
+	display: inline;
+}
+.thumb img{
+
+	width:100%;
+	height:100%;
+    margin-left:-15px;
+}
+.nav{
+	width:100%;
+}
+.container{
+	width:100%;
+	padding-right: 0px; 
+    padding-left: 0px; 
+    margin-right: 0; 
+    margin-left: 0; 
+}
+.ng-scope{
+	width:100%;
+}
+.fb_iframe_widget {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.row{
+	margin-right: 5%;
+    margin-left: 5%;
+}
+.tabs {
+    font-size: 1.4em;
+    margin-top: 30px;
+    text-align: center;
+    margin-right: 0%;
+    margin-left: -5%;
+}
+.tabs li a{
+	color: black;
+    padding: 0px;
+    transition: 0.1s ease background,color 0.1s;
+    border-radius: 2px;
+
+}
+
+}
+
+

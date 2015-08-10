@@ -74,7 +74,7 @@
 
 }
 
-@media screen and (min-width: 300px) and (max-width: 550px) {
+@media screen and (min-width: 450px) and (max-width: 550px) {
 
 .footer_left{font-size:30px;}
 #footer_right_upper{font-size:13px;}
@@ -85,7 +85,7 @@
 @media screen and (max-device-width: 450px) {
 */
 @media screen and (max-width: 450px){
-body{width:450px;}
+body{width:100%;}
 .footer_left{font-size:30px;margin-left:16px;}
 .footer_right{margin-right:20px;}
 #footer_right_upper{font-size:13px;}

@@ -1,0 +1,115 @@
+<div class="nav">
+   <div class="container">
+      <ul class="header row">
+        <!-- Title -->
+        <li><div class="pull-left">LOGO BANNER</div></li>
+        <li><div class="glyphicon glyphicon-search pull-right"></div></li>
+      </ul>
+		
+<!-- Tabs -->
+<ul class="tabs row">
+	<li><a id="cat1" href="#/category/1" class="">分類一</a></li>
+	<li><a id="cat2" href="#/category/2" class="">分類二</a></li>
+	<li><a id="cat3" href="#/category/3" class="">分類三</a></li>
+	<li><a id="cat4" href="#/category/4" class="">分類四</a></li>
+</ul>
+
+    </div>
+  </div>
+<style type="text/css">
+
+.tabs {
+    font-size: 1.5em;
+    margin-top: -40px;
+    text-align: center;
+    
+}
+.tabs li{
+    display: inline;
+}
+.tabs li a{
+    color: white;
+    padding: 5px 15px;
+    transition: 0.1s ease background,color 0.1s;
+    border-radius: 2px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 15px;
+    display:inline-block;
+}
+.tabs li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+  visibility: hidden;
+
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.tabs li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.tabs li :hover{
+	color: white;
+}
+.tabs li .active{
+	color: white;
+	background-color: orange;
+}
+@media screen and (min-width: 400px)and (max-width: 490px){
+	.tabs li a{
+    color: white;
+    padding: 0px;
+    transition: 0.1s ease background,color 0.1s;
+    border-radius: 2px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 15px;
+    display:inline-block;
+    width:60px;
+    font-size: 18px;
+    margin:10px;
+}
+}
+@media screen and (max-width: 400px){
+.tabs li a{
+	 color: white;
+    padding: 0px;
+    transition: 0.1s ease background,color 0.1s;
+    border-radius: 2px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 15px;
+    display:inline-block;
+    width:60px;
+    font-size: 18px;
+    margin:10px;
+	margin:0px;
+}
+
+
+}
+</style>
