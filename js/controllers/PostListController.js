@@ -13,12 +13,12 @@ app.controller('PostListController', ['$routeParams', '$scope', '$sce', '$route'
 
 	postList.getDatas().success(function(datas){
 		$scope.posts = [];
+		console.log("datas.length: "+datas.length);
 
 		for (var i = 0; i < 5; i++) {
 		    if( i < datas.length )
 				$scope.posts.push(data_of_a_post(i));
 		};
-
 
 		$scope.deliberatelyTrustDangerousSnippet = function(snippet) {
                return $sce.trustAsHtml(snippet);
