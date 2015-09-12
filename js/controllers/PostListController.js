@@ -13,12 +13,12 @@ app.controller('PostListController', ['$routeParams', '$scope', '$sce', '$route'
 
 	postList.getDatas().success(function(datas){
 		$scope.posts = [];
-		console.log("datas.length: "+datas.length);
 
 		for (var i = 0; i < 5; i++) {
 		    if( i < datas.length )
 				$scope.posts.push(data_of_a_post(i));
 		};
+
 
 		$scope.deliberatelyTrustDangerousSnippet = function(snippet) {
                return $sce.trustAsHtml(snippet);
@@ -40,7 +40,7 @@ app.controller('PostListController', ['$routeParams', '$scope', '$sce', '$route'
 			excerpt = $(data.excerpt);
 			a = excerpt.find("a");
 			if(a.length != 0) {
-				a[0].text = "[閱讀更多]";
+				a[0].text = "...";
 				a[0].href = "#/post/" + data.ID;
 			} else {
 				excerpt[0].innerHTML += " ... ";

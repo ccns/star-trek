@@ -5,6 +5,12 @@
  * @date    2015-08-04 22:38:00
  * @version $Id$
  */
+ a{
+ 	font-family: "微軟正黑體";
+ }
+ a:hover{
+ 	text-decoration: none;
+ }
  .post {
 	background-color: white;
 	margin-top: 30px;
@@ -13,25 +19,54 @@
 	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 	border-bottom-color: rgba(0,0,0,0.1);
 	box-shadow:0 2px 0px rgba(0,0,0,0.12);
+
 	
 }
+.post h3{
+	color: #455A64;
+	transition: all 0.2s ease-in-out 0s;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: "Open Sans","xingothic-tc-w3","微軟正黑體","Microsoft JhengHei";
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 36px;
+}
+
+.post h3:hover{
+	color: rgba(33, 150, 243, 0.75);
+}
+.post h5{
+	color:  rgba(33, 150, 243, 0.75);
+	transition: all 0.2s ease-in-out 0s;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: "Roboto",sans-serif;
+}
+
+.post h5:hover{
+	color:  rgba(33, 50, 243, 0.75);
+}
+
+
+
 .row{
 	margin-right:10%;
 	margin-left:10%;
 
 }
 .thumb{
-	height: 125px;
+	height: 250px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	text-align: center;
 
 }
 
 .thumb img{
+	max-width:600px;
+	width:250px;
 
-	width:100%;
-	height:100%;
-    
 }
 .tabs {
     font-size: 1.5em;
@@ -59,6 +94,10 @@
 	color: white;
 	background-color: orange;
 }
+.header-image img{
+	
+}
+
 @media screen and (min-width: 785px)and (max-width: 1599px) {
 .mobile{
 	display: none;
@@ -70,6 +109,17 @@
 	margin-right: 0%;
     margin-left: 0%;
 }
+.header-image{
+	text-align: center;
+	width:80%;
+}
+.thumb img{
+	max-width:600px;
+	width:200px;
+
+}
+
+
 }
  @media screen and (min-width: 450px) and (max-width: 780px){
 .desktop{
@@ -81,9 +131,25 @@
 .thumb img{
 
 	width:100%;
-	height:100%;
     margin-left:-15px;
 }
+.header-image{
+	text-align: center;
+	width:80%;
+}
+.thumb{
+	height: 250px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+
+}
+.thumb img{
+	max-width:600px;
+	width:200px;
+
+}
+
 
 }
  @media screen and (max-width: 450px){
@@ -95,12 +161,12 @@
 }
 .thumb img{
 
-	width:100%;
-	height:100%;
+	width:200px;
     margin-left:-15px;
 }
 .nav{
 	width:100%;
+	z-index: 10;
 }
 .container{
 	width:100%;
@@ -135,6 +201,23 @@
     border-radius: 2px;
 
 }
+.more-link a{
+	color: #57AD68;
+	font-family: "Roboto",sans-serif;
+}
+.more-link a:hover{
+	vertical-align: bottom;
+}
+p{
+	font-family: "Open Sans","xingothic-tc-w3","微軟正黑體","Microsoft JhengHei";
+	line-height: 30px;
+
+}
+.header-image{
+	text-align: center;
+	width:100%;
+}
+
 
 }
 

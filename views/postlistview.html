@@ -1,22 +1,24 @@
 <link href="css/postlist.css" rel="stylesheet">
 <div ng-include="'views/header.html'" ></div>
-<style> .nav{height:50px;}</style>
+<style> .nav{height:80px;}</style>
+<div class="header-image" style="text-align:center; width:100%; z-index:5;">
+<img class="header-image" src="http://localhost/wordpress/wp-content/themes/material-gaze/images/headers/blue.jpg"  >
+</div>
+
 <div class="container">
 	<div ng-include="'views/tabs.html'"></div>
 	<div infinite-scroll="loadMore()" infinite-scroll-distance="2">
 		<div ng-repeat='post in posts'>
 			<a href="{{post.href}}"><div class="post row">
-				<div class =" thumb col-md-3 mobile">
-					<img  src ="{{post.image}}">
+				<div class =" thumb " >
+					<img  class=""src ="{{post.image}}">
 				</div>
-				<div class="col-md-9">
+				<div class="" style="text-align:center;">
 			      	<h3>{{ post.title }}</h3>
-					<h5>by&nbsp;{{ post.author }}&nbsp;&nbsp;<small>{{ post.date | date:'yyyy-MM-dd HH:mm:ss' }}</small></h5>
+					<h5><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;{{ post.author }}&nbsp;&nbsp;&nbsp;&nbsp;<small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;{{ post.date | date:'yyyy-MM-dd HH:mm:ss' }}</small></h5>
 					<div ng-bind-html="deliberatelyTrustDangerousSnippet(post.excerpt)"></div>
 				</div>
-				<div class ="desktop thumb col-md-3 ">
-					<img  src ="{{post.image}}">
-				</div>
+				
 			</div></a>
 	    </div>
 	    <div ng-show='reddit.busy'>Loading data...</div>

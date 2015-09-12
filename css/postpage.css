@@ -42,3 +42,13 @@
 	border-bottom: 1px dashed black;
 	margin-bottom: 10px; 
 }
+p{
+	font-family: "Open Sans","xingothic-tc-w3","微軟正黑體","Microsoft JhengHei";
+	line-height: 30px;
+
+}
+h2{
+	font-family: "Open Sans","xingothic-tc-w3","微軟正黑體","Microsoft JhengHei";
+	line-height: 26px;	
+	text-align:center;
+}
